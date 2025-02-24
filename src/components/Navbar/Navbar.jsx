@@ -8,18 +8,18 @@ const Navbar = () => {
       <div className="mx-auto py-2 flex items-center justify-between px-4">
         {/* Lado izquierdo */}
         <div className="flex items-center space-x-4 font-bold text-lg text-[#333]">
-          <Link href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Coffee Tech Logo" className="h-12 w-12" />
           </Link>
-          <Link href="/menu">Menú</Link>
-          <Link href="/mis-pedidos">Mis Pedidos</Link>
-          <Link href="/reservar">Reservar Mesa</Link>
-          <Link href="/carrito">Carrito</Link>
+          <Link to="/menu">Menú</Link>
+          <Link to="/mis-pedidos">Mis Pedidos</Link>
+          <Link to="/reservar">Reservar Mesa</Link>
+          <Link to="/carrito">Carrito</Link>
         </div>
         {/* Lado derecho */}
         <div className="flex items-center space-x-4 font-bold text-lg text-[#333]">
-          <Link href="/login">Inicia Sesión</Link>
-          <Link href="/registro">Regístrate</Link>
+          <Link to="/login">Inicia Sesión</Link>
+          <Link to="/signUp">Regístrate</Link>
         </div>
       </div>
     </nav>

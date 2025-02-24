@@ -7,10 +7,15 @@ import oferta1 from "../../assets/img/oferta-1.png";
 import oferta2 from "../../assets/img/oferta-2.png";
 import oferta3 from "../../assets/img/oferta-3.png";
 import oferta4 from "../../assets/img/oferta-4.png";
+import exclusiveOffers from "../../assets/img/exclusive-offers.jpg";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Button1 from "../../components/Buttons/Button1";
 import Box from "../../components/Box/Box";
+import Title1 from "../../components/Titles/Title1";
+import Title2 from "../../components/Titles/Title2";
+import Title3 from "../../components/Titles/Title3";
+import Button2 from "../../components/Buttons/Button2";
 
 const LandingPage = () => {
   return (
@@ -21,21 +26,17 @@ const LandingPage = () => {
         className="relative flex flex-col justify-center items-center bg-cover bg-center text-white w-[100%] h-screen"
         style={{ backgroundImage: `url(${landing})` }}
       >
-        <div className="absolute inset-0 bg-[#4A362F] opacity-50 z-10"></div>
+        <div className="absolute inset-0 bg-[#4A362F61] z-10"></div>
         <h1 className="z-20 text-4xl font-montserrat">Bienvenidos a</h1>
         <h2 className="z-20 text-8xl font-fjalla">COFFEE TECH</h2>
       </section>
       {/* Order Here Section */}
       <div className="relative mb-5 p-5 text-center">
         <div className="w-0.5 h-42 bg-[#B7AE8F] mx-auto mb-5 mt-5" />
-        <h2 className="text-[#B7AE8F] mt-0 text-3xl text-center mb-2.5 font-extrabold">
-          Pide Aquí
-        </h2>
+        <Title1 text={"Pide Aquí"} />
         <div className="flex justify-around items-center pt-5 pb-5 pr-8 pl-8">
           <div className="grid p-5 w-[30%] text-left">
-            <h3 className="text-[#B7AE8F] text-center mb-6 text-3xl font-bold">
-              Domicilio
-            </h3>
+            <Title3 text={"Domiclio"} />
             <p className="text-xl">
               Disfruta de tu café favorito sin salir de casa. Haz tu pedido a
               domicilio y nosotros nos encargamos de llevarlo hasta tu puerta en
@@ -52,9 +53,7 @@ const LandingPage = () => {
             className="mt-5 mb-5 mr-0 ml-0 w-93 h-auto"
           />
           <div className="grid p-5 w-[30%] text-right">
-            <h3 className="text-[#B7AE8F] mb-6 text-center text-3xl font-bold">
-              Para retirar
-            </h3>
+            <Title3 text={"Para retirar"} />
             <p className="text-xl">
               Haz tu pedido en línea y retíralo en la cafetería cuando te sea
               más conveniente. Evita las filas y asegura tu bebida favorita
@@ -70,12 +69,8 @@ const LandingPage = () => {
       {/* Special Offers Section */}
       <div className="ofertas-especiales">
         <div className="w-0.5 h-42 bg-[#B7AE8F] mx-auto mb-5 mt-5" />
-        <h2 className="text-[#B7AE8F] mt-0 text-3xl text-center mb-2.5 font-extrabold">
-          OFERTAS ESPECIALES
-        </h2>
-        <h4 className="text-[#4A362F] mt-0 mb-5 text-2xl text-center font-semibold">
-          ¡No te pierdas nuestras promociones!
-        </h4>
+        <Title1 text={"Ofertas especiales"} />
+        <Title2 text={"¡No te pierdas nuestras promociones!"} />
         <div className="grid sm:grid-cols-1 md:grid-cols-2">
           <Box
             image={oferta1}
@@ -105,6 +100,58 @@ const LandingPage = () => {
               "Compra un Iced Cappuccino y obtén un Iced Caramel Latte con 50% de descuento. Refresca tu paladar."
             }
           />
+        </div>
+      </div>
+      {/* Exclusive Offers Section */}
+      <section
+        className="relative flex flex-col pt-24 pb-24 pr-0 pl-0 justify-center items-center text-center mt-36 mb-14 w-full min-h-[400px] bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${exclusiveOffers})` }}
+      >
+        <div className="relative z-30 text-white p-5 rounded-xl">
+          <h2 className="text-4xl m-0 mb-5 text-white font-bold">
+            ¡Recibe Ofertas Exclusivas!
+          </h2>
+          <p className="text-xl m-0 mb-5 text-white">
+            Suscríbete para recibir las mejores ofertas directamente en tu
+            correo
+          </p>
+          <form className="flex justify-center items-center">
+            <input
+              className="p-2.5 text-lg border-none rounded-sm outline-none z-20 w-48 bg-[#FFFEFC]"
+              type="email"
+              placeholder="Ingresa tu correo electrónico"
+            />
+            <button
+              className="pt-2.5 pb-2.5 pr-5 pl-0 text-lg border-none rounded-sm bg-[#B7AE8F] text-white cursor-pointer w-32 hover:bg-[#978F84]"
+              type="submit"
+            >
+              Suscribirse
+            </button>
+          </form>
+        </div>
+      </section>
+      {/* Comments Section */}
+      <div className="w-0.5 h-42 bg-[#B7AE8F] mx-auto mb-5 mt-5" />
+      <div className="max-w-7xl mx-auto p-1">
+        <Title1 text={"COMENTARIOS"} />
+        <Title2 text={"¡Tu opinión también cuenta!"} />
+        <div className="flex justify-between items-center border-b border-gray-300 pb-5 mb-5">
+          <div className="text-center grid">
+            <span className="font-montserrat text-5xl font-bold basis-[20%] text-center text-[#4A362F]">
+              4,5
+            </span>
+            <span className="text-[#4A362F] text-2xl">★★★★★</span>
+            <span className="font-montserrat text-sm text-[#4A362F]">
+              29156 Reseñas
+            </span>
+          </div>
+        </div>
+        <div className="flex justify-between mb-5">
+          <Button2 option={"Escribir una reseña"} />
+          <div className="flex">
+            <Button2 option={"Filtrar"} />
+            <Button2 option={"Ordenar"} />
+          </div>
         </div>
       </div>
     </div>
