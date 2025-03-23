@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-
 import cafePideAqui from "../../assets/img/cafe-pide-aqui.png";
 import landing from "../../assets/img/landing.jpg";
 import oferta1 from "../../assets/img/oferta-1.png";
@@ -8,14 +7,17 @@ import oferta2 from "../../assets/img/oferta-2.png";
 import oferta3 from "../../assets/img/oferta-3.png";
 import oferta4 from "../../assets/img/oferta-4.png";
 import exclusiveOffers from "../../assets/img/exclusive-offers.jpg";
+import comentario from "../../assets/img/comentario.jpg";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Button1 from "../../components/Buttons/Button1";
-import Box from "../../components/Box/Box";
+import OffersBox from "../../components/Box/OffersBox";
 import Title1 from "../../components/Titles/Title1";
 import Title2 from "../../components/Titles/Title2";
 import Title3 from "../../components/Titles/Title3";
 import Button2 from "../../components/Buttons/Button2";
+import CommentsBox from "../../components/Box/CommentsBox";
+import Footer from "../../components/Footer/Footer";
 
 const LandingPage = () => {
   return (
@@ -69,31 +71,31 @@ const LandingPage = () => {
       {/* Special Offers Section */}
       <div className="ofertas-especiales">
         <div className="w-0.5 h-42 bg-[#B7AE8F] mx-auto mb-5 mt-5" />
-        <Title1 text={"Ofertas especiales"} />
+        <Title1 text={"OFERTAS ESPECIALES"} />
         <Title2 text={"¡No te pierdas nuestras promociones!"} />
         <div className="grid sm:grid-cols-1 md:grid-cols-2">
-          <Box
+          <OffersBox
             image={oferta1}
             title={"Calor y sabor"}
             description={
               "Lleva un Caramel Macchiato y obtén un Espresso Doble gratis. Ideal para los amantes del café intenso."
             }
           />
-          <Box
+          <OffersBox
             image={oferta2}
             title={"Delicias al horno"}
             description={
               "Compra una Dona de Chocolate y obtén una Galleta Chips de Chocolate gratis. Doble delicia."
             }
           />
-          <Box
+          <OffersBox
             image={oferta3}
             title={"Comienza bien tu día"}
             description={
               "Disfruta de un Wrap de Pollo y obtén un Bowl de Yogurt con 20% de descuento. Un snack saludable y sabroso."
             }
           />
-          <Box
+          <OffersBox
             image={oferta4}
             title={"Refresca tu día"}
             description={
@@ -104,7 +106,7 @@ const LandingPage = () => {
       </div>
       {/* Exclusive Offers Section */}
       <section
-        className="relative flex flex-col pt-24 pb-24 pr-0 pl-0 justify-center items-center text-center mt-36 mb-14 w-full min-h-[400px] bg-cover bg-center bg-no-repeat"
+        className="relative flex flex-col pt-24 pb-24 pr-0 pl-0 justify-center items-center text-center mt-36 mb-14 w-full min-h-[500px] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${exclusiveOffers})` }}
       >
         <div className="relative z-30 text-white p-5 rounded-xl">
@@ -117,12 +119,12 @@ const LandingPage = () => {
           </p>
           <form className="flex justify-center items-center">
             <input
-              className="p-2.5 text-lg border-none rounded-sm outline-none z-20 w-48 bg-[#FFFEFC]"
-              type="email"
+              className="py-2 px-3 text-gray-800 text-lg rounded-l-xl outline-none z-20 w-70 bg-[#FFFEFC] placeholder:text-gray-400 cursor-auto"
               placeholder="Ingresa tu correo electrónico"
+              type="email"
             />
             <button
-              className="pt-2.5 pb-2.5 pr-5 pl-0 text-lg border-none rounded-sm bg-[#B7AE8F] text-white cursor-pointer w-32 hover:bg-[#978F84]"
+              className="py-2 px-3 text-lg border-none rounded-r-xl bg-[#B7AE8F] text-white cursor-pointer w-32 hover:bg-[#978F84]"
               type="submit"
             >
               Suscribirse
@@ -153,7 +155,31 @@ const LandingPage = () => {
             <Button2 option={"Ordenar"} />
           </div>
         </div>
+        <CommentsBox
+          imageSrc={comentario}
+          userName="Nicol Vasquez"
+          rating="★★★★☆"
+          commentDate="Hace 1 mes"
+          commentText="Buena atención, muy amables, un sitio bastante acogedor recomendado si gustas de una experiencia diferente, los desayunos son deliciosos."
+        />
+        <CommentsBox
+          imageSrc={comentario}
+          userName="Zareth Blanco"
+          rating="★★★★★"
+          commentDate="Hace un año"
+          commentText="Un local muy amplio y el ambiente es muy tranquilo. El personal es siempre muy amable y la variedad de café lo hace un lugar genial. Cuenta con WiFi y mobiliario adecuado para pasar el rato, trabajar y conversar con amigos. El menú es costoso (más caro que en una sala de onces) pero muy parecidos a los precios de otras franquicias de ese estilo."
+        />
+        <CommentsBox
+          imageSrc={comentario}
+          userName="Alex Ramos"
+          rating="★★★★★"
+          commentDate="Hace 7 meses"
+          commentText="El personal es siempre amable y servicial, y hacen que la experiencia sea aún más agradable. Sus baristas son conocedores y están dispuestos a ayudarte a elegir la bebida perfecta para tu gusto. Ya sea que prefieras un café clásico o una bebida más elaborada, encontrarás una amplia variedad en su menú."
+        />
       </div>
+      <br />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
