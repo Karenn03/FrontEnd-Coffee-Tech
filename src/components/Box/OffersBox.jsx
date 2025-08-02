@@ -1,6 +1,6 @@
 import React from "react";
 
-const Box = ({ image, title, description }) => {
+const OffersBox = ({ image, title, description }) => {
   return (
     <div className="flex flex-wrap justify-around pt-5 pb-5 pr-12 pl-12">
       <div className="w-full bg-[#FFFEFC] border-2 border-[#978F84] rounded-xl mb-5 p-5 flex items-center min-h-40">
@@ -22,4 +22,4 @@ const Box = ({ image, title, description }) => {
   );
 };
 
-export default Box;
+export default OffersBox;
